@@ -30,3 +30,7 @@ Streamlit-extras
 
 # Excel File Manipulation
 openpyxl
+
+# My project specific
+sktime==0.24.1
+llama-cpp-python==0.2.11
