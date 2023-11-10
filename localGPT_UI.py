@@ -10,6 +10,10 @@ from langchain.chains import RetrievalQA
 from langchain.prompts import PromptTemplate
 from langchain.memory import ConversationBufferMemory
 
+# fix streamlit deployment error RuntimeError: Your system has an unsupported version of sqlite3. Chroma requires sqlite3 >= 3.35.0. [[I do have greater version than that]]
+__import__('pysqlite3')
+import sys
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 
 def model_memory():
     # Adding history to the model.
