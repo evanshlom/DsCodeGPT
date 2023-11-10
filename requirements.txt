@@ -34,4 +34,4 @@ openpyxl
 # My project specific
 sktime==0.24.1
 llama-cpp-python==0.2.11
-sqlite==3.41.2
+sqlite==3.40
