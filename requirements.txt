@@ -35,3 +35,4 @@ openpyxl
 sktime==0.24.1
 llama-cpp-python==0.2.11
 # sqlite==3.40
+pysqlite3
