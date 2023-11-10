@@ -3,6 +3,9 @@
 # /DB
 # /models
 
+# Ignore unpickled llm model file
+*.gguf
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

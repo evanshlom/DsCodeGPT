@@ -81,6 +81,10 @@ if "RETRIEVER" not in st.session_state:
     st.session_state.RETRIEVER = RETRIEVER
 
 if "LLM" not in st.session_state:
+    # LLM = load_model(device_type=DEVICE_TYPE, model_id=MODEL_ID, model_basename=MODEL_BASENAME)
+    import pickle as pkl
+    with open(r"models\models--TheBloke--Llama-2-7b-Chat-GGUF\snapshots\191239b3e26b2882fb562ffccdd1cf0f65402adb\llama-2-7b-chat.Q4_K_M.pkl", "rb") as f:
+        LLM = pkl.load(f)
     LLM = load_model(device_type=DEVICE_TYPE, model_id=MODEL_ID, model_basename=MODEL_BASENAME)
     st.session_state["LLM"] = LLM
 
